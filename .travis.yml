@@ -1,0 +1,40 @@
+---
+language: node_js
+node_js:
+  - "0.10"
+  - "0.12"
+  - "4.2"
+  - "5"
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
+env:
+  - NPM_SCRIPT=node-test
+
+matrix:
+  fast_finish: true
+  include:
+  - node_js: "5"
+    env: NPM_SCRIPT=jscs
+  - node_js: "5"
+    env: NPM_SCRIPT=lint
+  - node_js: "5"
+    env: NPM_SCRIPT=node-test-with-coverage
+
+before_install:
+  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+  - "npm config set spin false"
+  - "npm install -g npm@^2"
+
+install:
+  - node --version
+  - npm install -g bower
+  - npm install
+  - bower install
+
+script:
+  - npm run-script $NPM_SCRIPT
