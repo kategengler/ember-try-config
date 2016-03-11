@@ -32,9 +32,7 @@ before_install:
 
 install:
   - node --version
-  - npm install -g bower
   - npm install
-  - bower install
 
 script:
   - npm run-script $NPM_SCRIPT
