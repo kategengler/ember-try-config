@@ -1,1 +1,1 @@
-module.exports = require('lib/auto-scenario-config-for-ember');
+module.exports = require('./lib/auto-scenario-config-for-ember');
