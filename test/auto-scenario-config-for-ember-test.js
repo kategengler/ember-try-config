@@ -57,6 +57,8 @@ describe('lib/auto-scenario-config-for-ember', function() {
       'v1.0.8',
       'v1.0.15',
       'v1.0.16',
+      'v1.1.3',
+      'v2.0.0',
       '1.13.0',
       'v2.0.0',
       'v2.1.1',
@@ -65,18 +67,17 @@ describe('lib/auto-scenario-config-for-ember', function() {
       'v1.11.14'
     ];
 
-    return autoScenarioConfigForEmber({ ember: '1.0.5 - 1.0.15 || >= 2.1.0 || ^1.11.0' }, availableVersions).then(function(config) {
+    return autoScenarioConfigForEmber({ ember: '1.0.5 - 1.0.15 || >= 2.1.0 || ^1.11.0 || 1.1.0 - 2.0.0' }, availableVersions).then(function(config) {
       expect(config.scenarios).to.deep.include.members(
         [
-          { name: 'ember-1.0.5', bower: { dependencies: { ember: '1.0.5' } } },
-          { name: 'ember-1.0.8', bower: { dependencies: { ember: '1.0.8' } } },
           { name: 'ember-1.0.15', bower: { dependencies: { ember: '1.0.15' } } },
+          { name: 'ember-1.1.3', bower: { dependencies: { ember: '1.1.3' } } },
+          { name: 'ember-2.0.0', bower: { dependencies: { ember: '2.0.0' } } },
           { name: 'ember-1.13.0', bower: { dependencies: { ember: '1.13.0' } } },
           { name: 'ember-2.1.1', bower: { dependencies: { ember: '2.1.1' } } },
           { name: 'ember-3.0.0', bower: { dependencies: { ember: '3.0.0' } } },
-          { name: 'ember-1.11.0', bower: { dependencies: { ember: '1.11.0' } } },
-          { name: 'ember-1.11.14', bower: { dependencies: { ember: '1.11.14' } }
-          }]
+          { name: 'ember-1.11.14', bower: { dependencies: { ember: '1.11.14' } } }
+        ]
       );
     });
   });
