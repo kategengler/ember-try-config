@@ -2,7 +2,7 @@
   "name": "ember-try-config",
   "version": "2.0.0",
   "description": "Configuration generator for ember-try",
-  "main": "index.js",
+  "main": "lib/auto-scenario-config-for-ember.js",
   "scripts": {
     "node-test": "mocha test/**/*.js",
     "node-test-with-coverage": "istanbul cover _mocha test/**/*.js && ./upload-coverage.sh",
