@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-CODECLIMATE_REPO_TOKEN=688d1d03734a9088af2fb3c66afb2274a8302e89edbf08dfab0a4bb9a5b8a79a node_modules/.bin/codeclimate-test-reporter < coverage/lcov.info
+CODECLIMATE_REPO_TOKEN=702d3e6c4671fa191c7538bb0110d6e3308662cd7f5c8359008bc10144be7d7a node_modules/.bin/codeclimate-test-reporter < coverage/lcov.info
