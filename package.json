@@ -10,7 +10,7 @@
     "jscs": "jscs lib test",
     "test": "npm run-script jscs && npm run-script lint && npm run-script node-test"
   },
-  "repository": "kategengler/ember-try-config",
+  "repository": "ember-cli/ember-try-config",
   "engines": {
     "node": ">= 0.10.0"
   },
