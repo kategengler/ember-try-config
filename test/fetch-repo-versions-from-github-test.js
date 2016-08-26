@@ -1,13 +1,13 @@
 'use strict';
 
 var expect = require('chai').expect;
-var fetchEmberVersionsFromGithub = require('../lib/fetch-ember-versions-from-github');
+var fetchRepoVersionsFromGithub = require('../lib/fetch-repo-versions-from-github');
 var RSVP = require('rsvp');
 
 describe('lib/fetch-ember-versions-from-github', function() {
 
   it('fetches versions', function() {
-    return fetchEmberVersionsFromGithub({logErrors: true}).then(function(versions) {
+    return fetchRepoVersionsFromGithub('ember', {logErrors: true}).then(function(versions) {
       expect(versions.length).to.equal(30);
     });
   });
@@ -21,7 +21,7 @@ describe('lib/fetch-ember-versions-from-github', function() {
       });
     }
 
-    return fetchEmberVersionsFromGithub({fetch: fakeFetch}).then(function() {
+    return fetchRepoVersionsFromGithub('ember', {fetch: fakeFetch}).then(function() {
       expect(requestedUrl).to.equal('https://api.github.com/repos/components/ember/tags?per_page=30');
     });
   });
@@ -35,7 +35,7 @@ describe('lib/fetch-ember-versions-from-github', function() {
       });
     }
 
-    return fetchEmberVersionsFromGithub({fetch: fakeFetch}).then(function(versions) {
+    return fetchRepoVersionsFromGithub('ember', {fetch: fakeFetch}).then(function(versions) {
       expect(versions.length).to.equal(0);
       expect(options.timeout).to.equal(1000);
     });
@@ -54,7 +54,7 @@ describe('lib/fetch-ember-versions-from-github', function() {
       });
     }
 
-    return fetchEmberVersionsFromGithub({fetch: fakeFetch, logErrors: true}).then(function(versions) {
+    return fetchRepoVersionsFromGithub('ember', {fetch: fakeFetch, logErrors: true}).then(function(versions) {
       expect(versions).to.eql(['cat', 'dog', 'fish']);
     });
   });
