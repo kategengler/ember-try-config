@@ -50,6 +50,72 @@ describe('lib/auto-scenario-config-for-ember', function() {
     });
   });
 
+  it('includes default scenarios with ember-data and works with straight version #', function() {
+    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '2.0.0', withEmberData: true } }).then(function(config) {
+      expect(config.scenarios).to.eql([
+        {
+          name: 'default',
+          bower: {
+            dependencies: {}
+          }
+        },
+        {
+          name: 'ember-beta',
+          allowedToFail: true,
+          bower: {
+            dependencies: {
+              ember: 'components/ember#beta'
+            },
+            resolutions: {
+              ember: 'beta'
+            }
+          },
+          npm: {
+            devDependencies: {
+              'ember-data': 'components/ember-data#beta'
+            },
+            resolutions: {
+              'ember-data': 'beta'
+            }
+          }
+        },
+        {
+          name: 'ember-canary',
+          allowedToFail: true,
+          bower: {
+            dependencies: {
+              ember: 'components/ember#canary'
+            },
+            resolutions: {
+              ember: 'canary'
+            }
+          },
+          npm: {
+            devDependencies: {
+              'ember-data': 'components/ember-data#canary'
+            },
+            resolutions: {
+              'ember-data': 'canary'
+            }
+          }
+        },
+        {
+          name: 'ember-2.0.0',
+          bower: {
+            dependencies: {
+              ember: '2.0.0'
+            }
+          },
+          npm: {
+            devDependencies: {
+              'ember-data': '2.0.0'
+            }
+          }
+        }
+      ]);
+    });
+  });
+
   it('works with complex semver statement', function() {
     var availableVersions = [
       'v1.0.0',
