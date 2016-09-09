@@ -8,7 +8,8 @@
     "node-test-with-coverage": "istanbul cover _mocha test/**/*.js && ./upload-coverage.sh",
     "lint": "mocha lint-test",
     "jscs": "jscs lib test",
-    "test": "npm run-script jscs && npm run-script lint && npm run-script node-test"
+    "test": "npm run-script jscs && npm run-script lint && npm run-script node-test",
+    "preversion": "node bin/update-known-versions.js"
   },
   "repository": "ember-cli/ember-try-config",
   "engines": {

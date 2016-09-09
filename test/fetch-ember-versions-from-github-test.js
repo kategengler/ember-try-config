@@ -8,7 +8,7 @@ describe('lib/fetch-ember-versions-from-github', function() {
 
   it('fetches versions', function() {
     return fetchEmberVersionsFromGithub({logErrors: true}).then(function(versions) {
-      expect(versions.length).to.equal(30);
+      expect(versions.indexOf('2.4.0')).not.to.equal(-1);
     });
   });
 
@@ -21,8 +21,8 @@ describe('lib/fetch-ember-versions-from-github', function() {
       });
     }
 
-    return fetchEmberVersionsFromGithub({fetch: fakeFetch}).then(function() {
-      expect(requestedUrl).to.equal('https://api.github.com/repos/components/ember/tags?per_page=30');
+    return fetchEmberVersionsFromGithub({fetch: fakeFetch, perPage: 30, page: 0, accessToken: 'foo' }).then(function() {
+      expect(requestedUrl).to.equal('https://api.github.com/repos/components/ember/tags?per_page=30&page=0&access_token=foo');
     });
   });
 
