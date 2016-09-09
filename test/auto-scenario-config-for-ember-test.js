@@ -103,7 +103,8 @@ describe('lib/auto-scenario-config-for-ember', function() {
           name: 'ember-2.0.0',
           bower: {
             dependencies: {
-              ember: '2.0.0'
+              ember: '2.0.0',
+              'ember-data': '2.0.0'
             }
           },
           npm: {
