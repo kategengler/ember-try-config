@@ -1,0 +1,12 @@
+[
+  "ember",
+  "ember-cli-shims",
+  "ember-cli-test-loader",
+  "ember-data",
+  "ember-load-initializers",
+  "ember-qunit",
+  "ember-resolver",
+  "jquery",
+  "loader.js",
+  "qunit"
+]

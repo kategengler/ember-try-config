@@ -1,0 +1,8 @@
+[
+  "ember-cli",
+  "ember-cli-babel",
+  "ember-cli-htmlbars",
+  "ember-cli-htmlbars-inline-precompile",
+  "ember-cli-qunit",
+  "ember-data"
+]
