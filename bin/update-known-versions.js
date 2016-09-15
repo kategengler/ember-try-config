@@ -24,11 +24,6 @@ fetchVersions('ember', { logErrors: true })
     writeVersionsToFile('data/versions/ember.json', versions);
   });
 
-fetchVersions('ember-data', { logErrors: true })
-  .then(function(versions) {
-    writeVersionsToFile('data/versions/ember-data.json', versions);
-  });
-
 fetchVersions('ember-new-output', { logErrors: true, owner: 'ember-cli' })
   .then(function(versions) {
     var uniqVersions = array.uniq(versions);
