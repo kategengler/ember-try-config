@@ -5,6 +5,7 @@ var fetchEmberVersionsFromGithub = require('../lib/fetch-ember-versions-from-git
 var RSVP = require('rsvp');
 
 describe('lib/fetch-ember-versions-from-github', function() {
+  this.timeout(10000);
 
   it('fetches versions', function() {
     return fetchEmberVersionsFromGithub({logErrors: true}).then(function(versions) {
