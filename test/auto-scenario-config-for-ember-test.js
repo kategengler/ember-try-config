@@ -6,6 +6,8 @@ var autoScenarioConfigForEmber   = require('../lib/auto-scenario-config-for-embe
 describe('lib/auto-scenario-config-for-ember', function() {
 
   it('includes default scenarios and works with straight version #', function() {
+    this.timeout(10000);
+
     return autoScenarioConfigForEmber({ versionCompatibility: { ember: '2.0.0' } }).then(function(config) {
       expect(config.scenarios).to.eql([
         {
