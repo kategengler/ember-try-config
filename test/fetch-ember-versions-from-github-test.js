@@ -9,7 +9,7 @@ describe('lib/fetch-ember-versions-from-github', function() {
 
   it('fetches versions', function() {
     return fetchEmberVersionsFromGithub({logErrors: true}).then(function(versions) {
-      expect(versions.indexOf('2.4.0')).not.to.equal(-1);
+      expect(versions).to.contain('2.4.0');
     });
   });
 
@@ -21,7 +21,7 @@ describe('lib/fetch-ember-versions-from-github', function() {
     }
 
     return fetchEmberVersionsFromGithub({remoteGitTags: fakeRemoteGitTags}).then(function(versions) {
-      expect(versions.length).to.equal(0);
+      expect(versions).to.deep.equal([]);
     });
   });
 });
