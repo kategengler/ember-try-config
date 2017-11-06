@@ -15,4 +15,3 @@ upload-coverage.sh
 .codeclimate.yml
 .eslintignore
 .eslintrc.js
-.jscsrc
