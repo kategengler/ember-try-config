@@ -1,6 +1,5 @@
 'use strict';
 
-let expect = require('chai').expect;
 let sortVersions = require('../lib/sort-versions');
 
 describe('lib/sort-versions', () => {
@@ -20,7 +19,7 @@ describe('lib/sort-versions', () => {
       '1.13.4',
     ];
 
-    expect(sortVersions(input)).to.deep.equal(expected);
+    expect(sortVersions(input)).toEqual(expected);
   });
 
   test('can handle "v" prefix', () => {
@@ -38,7 +37,7 @@ describe('lib/sort-versions', () => {
       '1.13.4',
     ];
 
-    expect(sortVersions(input)).to.deep.equal(expected);
+    expect(sortVersions(input)).toEqual(expected);
   });
 
 
@@ -57,7 +56,7 @@ describe('lib/sort-versions', () => {
       'foo',
     ];
 
-    expect(sortVersions(input)).to.deep.equal(expected);
+    expect(sortVersions(input)).toEqual(expected);
   });
 
 });
