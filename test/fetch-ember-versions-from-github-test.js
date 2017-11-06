@@ -1,14 +1,14 @@
 'use strict';
 
-var expect = require('chai').expect;
-var fetchEmberVersionsFromGithub = require('../lib/fetch-ember-versions-from-github');
-var RSVP = require('rsvp');
+let expect = require('chai').expect;
+let fetchEmberVersionsFromGithub = require('../lib/fetch-ember-versions-from-github');
+let RSVP = require('rsvp');
 
 describe('lib/fetch-ember-versions-from-github', function() {
   this.timeout(10000);
 
   it('fetches versions', function() {
-    return fetchEmberVersionsFromGithub({logErrors: true}).then(function(versions) {
+    return fetchEmberVersionsFromGithub({ logErrors: true }).then(versions => {
       expect(versions).to.contain('2.4.0');
     });
   });
@@ -20,7 +20,7 @@ describe('lib/fetch-ember-versions-from-github', function() {
       });
     }
 
-    return fetchEmberVersionsFromGithub({remoteGitTags: fakeRemoteGitTags}).then(function(versions) {
+    return fetchEmberVersionsFromGithub({ remoteGitTags: fakeRemoteGitTags }).then(versions => {
       expect(versions).to.deep.equal([]);
     });
   });
