@@ -1,10 +1,8 @@
 'use strict';
 
-var glob = require('glob').sync;
+let glob = require('glob').sync;
 
-var paths = glob('test/**/*.js').filter(function(path) {
-  return !/fixtures/.test(path);
-});
+let paths = glob('test/**/*.js').filter(path => !(/fixtures/).test(path));
 
 paths = paths.concat(glob('lib/**/*.js'));
 

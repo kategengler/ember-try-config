@@ -1,14 +1,14 @@
 'use strict';
 
-var expect = require('chai').expect;
-var autoScenarioConfigForEmber = require('../lib/auto-scenario-config-for-ember');
+let expect = require('chai').expect;
+let autoScenarioConfigForEmber = require('../lib/auto-scenario-config-for-ember');
 
 describe('lib/auto-scenario-config-for-ember', function() {
 
   it('includes default scenarios and works with straight version #', function() {
     this.timeout(10000);
 
-    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '2.0.0' } }).then(function(config) {
+    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '2.0.0' } }).then(config => {
       expect(config.scenarios).to.eql([
         {
           name: 'default',
@@ -68,7 +68,7 @@ describe('lib/auto-scenario-config-for-ember', function() {
   });
 
   it('works with complex semver statement', function() {
-    var availableVersions = [
+    let availableVersions = [
       'v1.0.0',
       'v1.0.5',
       'v1.0.8',
@@ -84,7 +84,7 @@ describe('lib/auto-scenario-config-for-ember', function() {
       'v1.11.14',
     ];
 
-    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '1.0.5 - 1.0.15 || >= 2.1.0 || ^1.11.0 || 1.1.0 - 2.0.0' }, availableVersions }).then(function(config) {
+    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '1.0.5 - 1.0.15 || >= 2.1.0 || ^1.11.0 || 1.1.0 - 2.0.0' }, availableVersions }).then(config => {
       expect(config.scenarios).to.deep.include.members(
         [
           { name: 'ember-1.0.15', bower: { dependencies: { ember: '1.0.15' } }, npm: { devDependencies: { 'ember-source': null } } },
