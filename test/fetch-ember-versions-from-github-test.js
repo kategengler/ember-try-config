@@ -14,7 +14,7 @@ describe('lib/fetch-ember-versions-from-github', () => {
 
   test('returns empty array on error/timeout', () => {
     function fakeRemoteGitTags() {
-      return new RSVP.Promise(function() {
+      return new RSVP.Promise(() => {
         throw new Error('Timeout');
       });
     }
