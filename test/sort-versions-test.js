@@ -10,14 +10,14 @@ describe('lib/sort-versions', function() {
       '2.0.0',
       '2.13.0',
       '1.13.4',
-      '2.0.1'
+      '2.0.1',
     ];
 
     var expected = [
       '2.13.0',
       '2.0.1',
       '2.0.0',
-      '1.13.4'
+      '1.13.4',
     ];
 
     expect(sortVersions(input)).to.deep.equal(expected);
@@ -28,14 +28,14 @@ describe('lib/sort-versions', function() {
       '2.0.0',
       '2.13.0',
       '1.13.4',
-      'v2.0.1'
+      'v2.0.1',
     ];
 
     var expected = [
       '2.13.0',
       'v2.0.1',
       '2.0.0',
-      '1.13.4'
+      '1.13.4',
     ];
 
     expect(sortVersions(input)).to.deep.equal(expected);
@@ -47,14 +47,14 @@ describe('lib/sort-versions', function() {
       '2.0.0',
       '2.13.0',
       'foo',
-      'bar'
+      'bar',
     ];
 
     var expected = [
       '2.13.0',
       '2.0.0',
       'bar',
-      'foo'
+      'foo',
     ];
 
     expect(sortVersions(input)).to.deep.equal(expected);

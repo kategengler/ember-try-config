@@ -1,7 +1,7 @@
 'use strict';
 
-var expect        = require('chai').expect;
-var autoScenarioConfigForEmber   = require('../lib/auto-scenario-config-for-ember');
+var expect = require('chai').expect;
+var autoScenarioConfigForEmber = require('../lib/auto-scenario-config-for-ember');
 
 describe('lib/auto-scenario-config-for-ember', function() {
 
@@ -13,56 +13,56 @@ describe('lib/auto-scenario-config-for-ember', function() {
         {
           name: 'default',
           bower: {
-            dependencies: {}
-          }
+            dependencies: {},
+          },
         },
         {
           name: 'ember-beta',
           allowedToFail: true,
           bower: {
             dependencies: {
-              ember: 'components/ember#beta'
+              ember: 'components/ember#beta',
             },
             resolutions: {
-              ember: 'beta'
-            }
+              ember: 'beta',
+            },
           },
           npm: {
             devDependencies: {
-              'ember-source': null
-            }
-          }
+              'ember-source': null,
+            },
+          },
         },
         {
           name: 'ember-canary',
           allowedToFail: true,
           bower: {
             dependencies: {
-              ember: 'components/ember#canary'
+              ember: 'components/ember#canary',
             },
             resolutions: {
-              ember: 'canary'
-            }
+              ember: 'canary',
+            },
           },
           npm: {
             devDependencies: {
-              'ember-source': null
-            }
-          }
+              'ember-source': null,
+            },
+          },
         },
         {
           name: 'ember-2.0.0',
           bower: {
             dependencies: {
-              ember: '2.0.0'
-            }
+              ember: '2.0.0',
+            },
           },
           npm: {
             devDependencies: {
-              'ember-source': null
-            }
-          }
-        }
+              'ember-source': null,
+            },
+          },
+        },
       ]);
     });
   });
@@ -81,10 +81,10 @@ describe('lib/auto-scenario-config-for-ember', function() {
       'v2.1.1',
       'v3.0.0',
       'v1.11.0',
-      'v1.11.14'
+      'v1.11.14',
     ];
 
-    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '1.0.5 - 1.0.15 || >= 2.1.0 || ^1.11.0 || 1.1.0 - 2.0.0' }, availableVersions: availableVersions }).then(function(config) {
+    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '1.0.5 - 1.0.15 || >= 2.1.0 || ^1.11.0 || 1.1.0 - 2.0.0' }, availableVersions }).then(function(config) {
       expect(config.scenarios).to.deep.include.members(
         [
           { name: 'ember-1.0.15', bower: { dependencies: { ember: '1.0.15' } }, npm: { devDependencies: { 'ember-source': null } } },
@@ -93,7 +93,7 @@ describe('lib/auto-scenario-config-for-ember', function() {
           { name: 'ember-1.13.0', bower: { dependencies: { ember: '1.13.0' } }, npm: { devDependencies: { 'ember-source': null } } },
           { name: 'ember-2.1.1', bower: { dependencies: { ember: '2.1.1' } }, npm: { devDependencies: { 'ember-source': null } } },
           { name: 'ember-3.0.0', bower: { dependencies: { ember: '3.0.0' } }, npm: { devDependencies: { 'ember-source': null } } },
-          { name: 'ember-1.11.14', bower: { dependencies: { ember: '1.11.14' } }, npm: { devDependencies: { 'ember-source': null } } }
+          { name: 'ember-1.11.14', bower: { dependencies: { ember: '1.11.14' } }, npm: { devDependencies: { 'ember-source': null } } },
         ]
       );
     });

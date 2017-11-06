@@ -11,5 +11,5 @@ fetchVersions({ logErrors: true })
     var uniqVersions = array.uniq(versions);
     console.log('versions found: ', uniqVersions.length);
 
-    fs.writeFileSync('lib/known-ember-versions.json', JSON.stringify(uniqVersions, null, 2), { encoding: 'utf-8'});
+    fs.writeFileSync('lib/known-ember-versions.json', JSON.stringify(uniqVersions, null, 2), { encoding: 'utf-8' });
   });

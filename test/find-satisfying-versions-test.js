@@ -25,7 +25,7 @@ describe('lib/find-satisfying-versions', function() {
       '1.3.5',
       '1.3.6',
       '1.4.1',
-      '1.5.0'
+      '1.5.0',
     ];
     var versions = findSatisfyingVersions(availableVersions, '< 1.2.0 || 1.2.15 || > 1.3.0 < 1.5.0');
     expect(versions).to.eql(['1.0.2', '1.1.0', '1.2.15', '1.3.6', '1.4.1']);
