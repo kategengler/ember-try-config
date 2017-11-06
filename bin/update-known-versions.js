@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict';
+
 let fs = require('fs');
 let array = require('lodash/array');
 let fetchVersions = require('../lib/fetch-ember-versions-from-github');
