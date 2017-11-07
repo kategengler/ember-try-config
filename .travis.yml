@@ -10,16 +10,8 @@ sudo: false
 cache:
   yarn: true
 
-env:
-  - NPM_SCRIPT=node-test
-
 matrix:
   fast_finish: true
-  include:
-  - node_js: "8"
-    env: NPM_SCRIPT=lint
-  - node_js: "8"
-    env: NPM_SCRIPT=node-test-with-coverage
 
 before_install:
   - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
@@ -31,4 +23,9 @@ install:
   - yarn install --no-lockfile
 
 script:
-  - yarn $NPM_SCRIPT
+  - yarn test --coverage
+
+after_success:
+  - if [ "$TRAVIS_NODE_VERSION" = "8" ]; then
+      ./upload-coverage.sh;
+    fi

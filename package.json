@@ -4,8 +4,6 @@
   "description": "Configuration generator for ember-try",
   "main": "lib/auto-scenario-config-for-ember.js",
   "scripts": {
-    "node-test": "jest",
-    "node-test-with-coverage": "jest --coverage && ./upload-coverage.sh",
     "lint": "eslint .",
     "test": "jest --projects jest.config.js jest.lint.config.js",
     "preversion": "node bin/update-known-versions.js"
