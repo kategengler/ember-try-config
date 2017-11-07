@@ -1,11 +1,10 @@
 'use strict';
 
-let expect = require('chai').expect;
 let sortVersions = require('../lib/sort-versions');
 
-describe('lib/sort-versions', function() {
+describe('lib/sort-versions', () => {
 
-  it('sorts by semver with the most recent version on top', function() {
+  test('sorts by semver with the most recent version on top', () => {
     let input = [
       '2.0.0',
       '2.13.0',
@@ -20,10 +19,10 @@ describe('lib/sort-versions', function() {
       '1.13.4',
     ];
 
-    expect(sortVersions(input)).to.deep.equal(expected);
+    expect(sortVersions(input)).toEqual(expected);
   });
 
-  it('can handle "v" prefix', function() {
+  test('can handle "v" prefix', () => {
     let input = [
       '2.0.0',
       '2.13.0',
@@ -38,11 +37,11 @@ describe('lib/sort-versions', function() {
       '1.13.4',
     ];
 
-    expect(sortVersions(input)).to.deep.equal(expected);
+    expect(sortVersions(input)).toEqual(expected);
   });
 
 
-  it('sorts non-semver versions alphabetically at the bottom', function() {
+  test('sorts non-semver versions alphabetically at the bottom', () => {
     let input = [
       '2.0.0',
       '2.13.0',
@@ -57,7 +56,7 @@ describe('lib/sort-versions', function() {
       'foo',
     ];
 
-    expect(sortVersions(input)).to.deep.equal(expected);
+    expect(sortVersions(input)).toEqual(expected);
   });
 
 });
