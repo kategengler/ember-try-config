@@ -23,7 +23,12 @@ install:
   - yarn install --no-lockfile
 
 script:
-  - yarn test --coverage
+  # https://github.com/jest-community/jest-runner-eslint/pull/15
+  - if [ "$TRAVIS_NODE_VERSION" = "4" ]; then
+      yarn jest --coverage;
+    else
+      yarn test --coverage;
+    fi
 
 after_success:
   - if [ "$TRAVIS_NODE_VERSION" = "8" ]; then
