@@ -1,5 +1,29 @@
 # Change Log
 
+## [v2.2.0](https://github.com/ember-cli/ember-try-config/tree/v2.2.0) (2017-11-07)
+[Full Changelog](https://github.com/ember-cli/ember-try-config/compare/v2.1.0...v2.2.0)
+
+**Implemented enhancements:**
+
+- Use `remote-git-tags` instead of GitHub API [\#12](https://github.com/ember-cli/ember-try-config/pull/12) ([Turbo87](https://github.com/Turbo87))
+- Update "known-ember-versions.json" file [\#11](https://github.com/ember-cli/ember-try-config/pull/11) ([Turbo87](https://github.com/Turbo87))
+-  Cache HTTP responses to avoid GitHub API rate limiting [\#9](https://github.com/ember-cli/ember-try-config/pull/9) ([Turbo87](https://github.com/Turbo87))
+- Sort generated configs according to semver rules [\#7](https://github.com/ember-cli/ember-try-config/pull/7) ([Turbo87](https://github.com/Turbo87))
+
+**Fixed bugs:**
+
+- Scenario generator "broken" if `ember-source` is used [\#14](https://github.com/ember-cli/ember-try-config/issues/14)
+- v2.x Backports [\#19](https://github.com/ember-cli/ember-try-config/pull/19) ([Turbo87](https://github.com/Turbo87))
+- Set `ember-source` dependency to `null` for bower scenarios [\#15](https://github.com/ember-cli/ember-try-config/pull/15) ([Turbo87](https://github.com/Turbo87))
+
+**Merged pull requests:**
+
+- Use `yarn` instead of `npm` [\#17](https://github.com/ember-cli/ember-try-config/pull/17) ([Turbo87](https://github.com/Turbo87))
+- Replace JSCS with ESLint [\#16](https://github.com/ember-cli/ember-try-config/pull/16) ([Turbo87](https://github.com/Turbo87))
+- Increase minimum Node version to 4.5 [\#10](https://github.com/ember-cli/ember-try-config/pull/10) ([Turbo87](https://github.com/Turbo87))
+- Increase test timeouts for tests hitting the network [\#8](https://github.com/ember-cli/ember-try-config/pull/8) ([Turbo87](https://github.com/Turbo87))
+- Update known ember versions [\#6](https://github.com/ember-cli/ember-try-config/pull/6) ([kategengler](https://github.com/kategengler))
+
 ## [v2.1.0](https://github.com/ember-cli/ember-try-config/tree/v2.1.0) (2016-09-09)
 [Full Changelog](https://github.com/ember-cli/ember-try-config/compare/v2.0.1...v2.1.0)
 
