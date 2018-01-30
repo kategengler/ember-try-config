@@ -15,8 +15,8 @@
   "devDependencies": {
     "codecov": "^3.0.0",
     "glob": "^7.0.0",
-    "jest": "^21.2.1",
-    "jest-runner-eslint": "^0.3.0"
+    "jest": "^22.1.4",
+    "jest-runner-eslint": "^0.4.0"
   },
   "dependencies": {
     "lodash": "^4.6.1",
