@@ -22,7 +22,7 @@
     "lodash": "^4.6.1",
     "remote-git-tags": "^2.0.0",
     "rsvp": "^4.8.1",
-    "semver": "^5.1.0"
+    "semver": "^5.5.0"
   },
   "keywords": [
     "ember-try"
