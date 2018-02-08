@@ -5,8 +5,8 @@ tests/
 tmp/
 test/
 .idea/
+coverage/
 lint-test.js
-upload-coverage.sh
 **/.gitkeep
 .editorconfig
 .gitignore

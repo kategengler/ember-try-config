@@ -14,7 +14,6 @@ matrix:
   fast_finish: true
 
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
 
@@ -32,5 +31,5 @@ script:
 
 after_success:
   - if [ "$TRAVIS_NODE_VERSION" = "8" ]; then
-      ./upload-coverage.sh;
+      node_modules/.bin/codecov;
     fi
