@@ -1,5 +1,17 @@
 # Change Log
 
+## [v3.0.0](https://github.com/ember-cli/ember-try-config/tree/v3.0.0)
+
+[Full Changelog](https://github.com/ember-cli/ember-try-config/compare/v2.2.0...v3.0.0)
+
+- BREAKING CHANGE: The consuming project must be using ember via the ember-source npm package. This will continue to test older versions of Ember from bower, but the starting point must be npm-based. 
+
+**Merged pull requests:**
+
+- Use ember-source for versions it is available. Support testing channels via ember-source package. [\#21](https://github.com/ember-cli/ember-try-config/pull/21) ([kategengler](https://github.com/kategengler))
+- Update outdated packages [\#20](https://github.com/ember-cli/ember-try-config/pull/20) ([kategengler](https://github.com/kategengler))
+- Replace Mocha, Chai and Istanbul with Jest [\#18](https://github.com/ember-cli/ember-try-config/pull/18) ([Turbo87](https://github.com/Turbo87))
+
 ## [v2.2.0](https://github.com/ember-cli/ember-try-config/tree/v2.2.0) (2017-11-07)
 [Full Changelog](https://github.com/ember-cli/ember-try-config/compare/v2.1.0...v2.2.0)
 
@@ -20,7 +32,6 @@
 
 - Use `yarn` instead of `npm` [\#17](https://github.com/ember-cli/ember-try-config/pull/17) ([Turbo87](https://github.com/Turbo87))
 - Replace JSCS with ESLint [\#16](https://github.com/ember-cli/ember-try-config/pull/16) ([Turbo87](https://github.com/Turbo87))
-- Increase minimum Node version to 4.5 [\#10](https://github.com/ember-cli/ember-try-config/pull/10) ([Turbo87](https://github.com/Turbo87))
 - Increase test timeouts for tests hitting the network [\#8](https://github.com/ember-cli/ember-try-config/pull/8) ([Turbo87](https://github.com/Turbo87))
 - Update known ember versions [\#6](https://github.com/ember-cli/ember-try-config/pull/6) ([kategengler](https://github.com/kategengler))
 
