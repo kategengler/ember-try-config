@@ -16,7 +16,7 @@
     "codecov": "^3.2.0",
     "glob": "^7.0.0",
     "jest": "^23.6.0",
-    "jest-runner-eslint": "^0.7.1"
+    "jest-runner-eslint": "^0.7.3"
   },
   "dependencies": {
     "ember-source-channel-url": "^1.0.1",
