@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "codecov": "^3.3.0",
-    "glob": "^7.0.0",
+    "glob": "^7.1.4",
     "jest": "^24.8.0",
     "jest-runner-eslint": "^0.7.3"
   },
