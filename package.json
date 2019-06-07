@@ -23,7 +23,7 @@
     "lodash": "^4.6.1",
     "package-json": "^5.0.0",
     "remote-git-tags": "^2.0.0",
-    "rsvp": "^4.8.1",
+    "rsvp": "^4.8.5",
     "semver": "^6.1.1"
   },
   "keywords": [
