@@ -24,7 +24,7 @@
     "package-json": "^5.0.0",
     "remote-git-tags": "^2.0.0",
     "rsvp": "^4.8.5",
-    "semver": "^6.3.0"
+    "semver": "^7.3.2"
   },
   "keywords": [
     "ember-try"
