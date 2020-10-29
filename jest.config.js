@@ -1,7 +1,5 @@
 'use strict';
 
 module.exports = {
-  testMatch: [
-    '**/test/**/*-test.js',
-  ],
+  testMatch: ['**/test/**/*-test.js'],
 };

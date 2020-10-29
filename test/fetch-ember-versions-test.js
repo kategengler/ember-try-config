@@ -6,7 +6,7 @@ describe('lib/fetch-ember-versions', () => {
   jest.setTimeout(10000);
 
   test('fetches versions', () => {
-    return fetchEmberVersions({ logErrors: true }).then(versions => {
+    return fetchEmberVersions({ logErrors: true }).then((versions) => {
       expect(versions).toContain('2.12.0');
     });
   });
@@ -18,7 +18,7 @@ describe('lib/fetch-ember-versions', () => {
       });
     }
 
-    return fetchEmberVersions({ packageJSON: fakePackageJSON }).then(versions => {
+    return fetchEmberVersions({ packageJSON: fakePackageJSON }).then((versions) => {
       expect(versions).toEqual([]);
     });
   });
