@@ -2,16 +2,18 @@
 
 let autoScenarioConfigForEmber = require('../lib/auto-scenario-config-for-ember');
 
-let fakeGetChannelUrl = function(channel) {
+let fakeGetChannelUrl = function (channel) {
   return Promise.resolve(`https://emberjs.example.com/${channel}-1234.tgz`);
 };
 
 describe('lib/auto-scenario-config-for-ember', () => {
-
   test('includes default scenarios and works with straight version #', () => {
     jest.setTimeout(10000);
 
-    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '2.18.0' }, getChannelURL: fakeGetChannelUrl }).then(config => {
+    return autoScenarioConfigForEmber({
+      versionCompatibility: { ember: '2.18.0' },
+      getChannelURL: fakeGetChannelUrl,
+    }).then((config) => {
       expect(config.scenarios).toEqual([
         {
           name: 'default',
@@ -69,7 +71,11 @@ describe('lib/auto-scenario-config-for-ember', () => {
       '3.1.1',
     ];
 
-    return autoScenarioConfigForEmber({ versionCompatibility: { ember: '2.11.0 - 2.12.7 || ~ 3.1.0 || ^2.18.0' }, availableVersions, getChannelURL: fakeGetChannelUrl }).then(config => {
+    return autoScenarioConfigForEmber({
+      versionCompatibility: { ember: '2.11.0 - 2.12.7 || ~ 3.1.0 || ^2.18.0' },
+      availableVersions,
+      getChannelURL: fakeGetChannelUrl,
+    }).then((config) => {
       expect(config.scenarios).toMatchSnapshot();
     });
   });
