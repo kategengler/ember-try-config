@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   root: true,
   parserOptions: {
@@ -65,7 +67,7 @@ module.exports = {
     'func-call-spacing': 2,
     'indent': [2, 2, {
       'SwitchCase': 1,
-      'VariableDeclarator': { 'var': 2, 'let': 2, 'const': 3 }
+      'VariableDeclarator': { 'var': 2, 'let': 2, 'const': 3 },
     }],
     'key-spacing': 2,
     'keyword-spacing': 2,
@@ -84,7 +86,6 @@ module.exports = {
     'no-whitespace-before-property': 2,
     'object-curly-spacing': [2, 'always'],
     'semi-spacing': 2,
-    'semi': 2,
     'space-before-blocks': 2,
     'space-before-function-paren': [2, 'never'],
     'space-in-parens': 2,
@@ -117,4 +118,13 @@ module.exports = {
     'template-curly-spacing': 2,
     'yield-star-spacing': 2,
   },
+  overrides: [
+    {
+      files: ['test/**/*.js'],
+
+      env: {
+        jest: true,
+      },
+    },
+  ],
 };

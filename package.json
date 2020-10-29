@@ -5,7 +5,8 @@
   "main": "lib/auto-scenario-config-for-ember.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --projects jest.config.js jest.lint.config.js",
+    "test": "npm-run-all lint test:jest",
+    "test:jest": "jest --projects jest.config.js",
     "preversion": "node bin/update-known-versions.js"
   },
   "repository": "ember-cli/ember-try-config",
@@ -15,8 +16,9 @@
   "devDependencies": {
     "codecov": "^3.7.1",
     "glob": "^7.1.6",
+    "eslint": "^7.12.1",
     "jest": "^24.9.0",
-    "jest-runner-eslint": "^0.7.4"
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "ember-source-channel-url": "^1.0.1",
