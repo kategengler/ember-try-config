@@ -1,7 +1,6 @@
 'use strict';
 
 let fetchEmberVersions = require('../lib/fetch-ember-versions');
-let RSVP = require('rsvp');
 
 describe('lib/fetch-ember-versions', () => {
   jest.setTimeout(10000);
@@ -14,7 +13,7 @@ describe('lib/fetch-ember-versions', () => {
 
   test('returns empty array on error/timeout', () => {
     function fakePackageJSON() {
-      return new RSVP.Promise(() => {
+      return new Promise(() => {
         throw new Error('Timeout');
       });
     }

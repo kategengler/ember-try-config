@@ -1,10 +1,9 @@
 'use strict';
 
 let autoScenarioConfigForEmber = require('../lib/auto-scenario-config-for-ember');
-let RSVP = require('rsvp');
 
 let fakeGetChannelUrl = function(channel) {
-  return RSVP.resolve(`https://emberjs.example.com/${channel}-1234.tgz`);
+  return Promise.resolve(`https://emberjs.example.com/${channel}-1234.tgz`);
 };
 
 describe('lib/auto-scenario-config-for-ember', () => {
