@@ -5,7 +5,10 @@
   "keywords": [
     "ember-try"
   ],
-  "repository": "ember-cli/ember-try-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ember-cli/ember-try-config.git"
+  },
   "license": "MIT",
   "author": "Katie Gengler",
   "main": "lib/auto-scenario-config-for-ember.js",
@@ -13,7 +16,7 @@
     "lint": "eslint .",
     "test": "npm-run-all lint test:jest",
     "test:jest": "jest --projects jest.config.js",
-    "prepare": "node bin/update-known-versions.js"
+    "update-known-versions": "node bin/update-known-versions.js"
   },
   "dependencies": {
     "ember-source-channel-url": "^3.0.0",
@@ -38,6 +41,9 @@
     "registry": "https://registry.npmjs.org"
   },
   "release-it": {
+    "hooks": {
+      "after:bump": "npm run update-known-versions"
+    },
     "plugins": {
       "release-it-lerna-changelog": {
         "infile": "CHANGELOG.md",
