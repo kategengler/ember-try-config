@@ -1,7 +1,6 @@
 'use strict';
 
 let getEmberVersions = require('../lib/get-ember-versions');
-let knownBowerVersions = require('../lib/known-bower-ember-versions');
 let knownEmberSourceVersions = require('../lib/known-ember-source-versions');
 
 describe('lib/get-ember-versions', () => {
@@ -9,7 +8,7 @@ describe('lib/get-ember-versions', () => {
   test('merges fetched versions with versions known locally', () => {
     return getEmberVersions(['house', 'car', 'truck', '2.0.0']).then(versions => {
       expect(versions).toEqual(expect.arrayContaining(['house', 'car', 'truck']));
-      expect(versions.length).toBe(knownBowerVersions.length + knownEmberSourceVersions.length + 3);
+      expect(versions.length).toBe(knownEmberSourceVersions.length + 4);
     });
   });
 
