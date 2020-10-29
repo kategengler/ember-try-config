@@ -10,7 +10,7 @@
   },
   "repository": "ember-cli/ember-try-config",
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": "10.* || 12.* || >= 14"
   },
   "devDependencies": {
     "codecov": "^3.6.1",
