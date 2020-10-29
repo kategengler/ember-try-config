@@ -1,3 +1,26 @@
+## v4.0.0 (2020-10-29)
+
+#### :boom: Breaking Change
+* [#103](https://github.com/ember-cli/ember-try-config/pull/103) Drop Bower scenario support. ([@rwjblue](https://github.com/rwjblue))
+* [#98](https://github.com/ember-cli/ember-try-config/pull/98) Drop Node 6, 8, 11, 13 support, ([@rwjblue](https://github.com/rwjblue))
+
+#### :rocket: Enhancement
+* [#102](https://github.com/ember-cli/ember-try-config/pull/102) Migrate from RSVP to native Promises & async / await. ([@rwjblue](https://github.com/rwjblue))
+* [#100](https://github.com/ember-cli/ember-try-config/pull/100) Update dependencies / devDependencies to latest. ([@rwjblue](https://github.com/rwjblue))
+
+#### :house: Internal
+* [#101](https://github.com/ember-cli/ember-try-config/pull/101) Add release automation setup. ([@rwjblue](https://github.com/rwjblue))
+* [#99](https://github.com/ember-cli/ember-try-config/pull/99) Migrate to stand alone eslint. ([@rwjblue](https://github.com/rwjblue))
+* [#97](https://github.com/ember-cli/ember-try-config/pull/97) Migrate to GitHub Actions. ([@rwjblue](https://github.com/rwjblue))
+* [#24](https://github.com/ember-cli/ember-try-config/pull/24) TravisCI: Remove deprecated `sudo: false` option ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 4
+- Katie Gengler ([@kategengler](https://github.com/kategengler))
+- Robert Jackson ([@rwjblue](https://github.com/rwjblue))
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
+
 # Change Log
 
 ## [v3.0.0](https://github.com/ember-cli/ember-try-config/tree/v3.0.0)
