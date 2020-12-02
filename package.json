@@ -23,7 +23,7 @@
     "lodash": "^4.17.20",
     "package-json": "^6.5.0",
     "remote-git-tags": "^3.0.0",
-    "semver": "^7.3.2"
+    "semver": "^7.3.4"
   },
   "devDependencies": {
     "codecov": "^3.8.1",
