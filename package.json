@@ -21,7 +21,7 @@
   "dependencies": {
     "ember-source-channel-url": "^3.0.0",
     "lodash": "^4.17.21",
-    "package-json": "^6.5.0",
+    "package-json": "^7.0.0",
     "remote-git-tags": "^3.0.0",
     "semver": "^7.3.5"
   },
